@@ -13,7 +13,7 @@
     <div id="app" class="p-8">
         <h1 class="text-2xl font-bold">Smooth Scroll</h1>
 
-        <a href="#categories" class="text-blue-500">Testimonials</a>
+        <a href="#categories" class="text-blue-500" @click.prevent="scrollTo('#categories')">Testimonials</a>
 
         <div style="height: 2000px"></div>
 
@@ -21,7 +21,9 @@
             <h2 class="font-bold mb-6">Testimonials</h2>
 
             <div class="flex">
-                <div class="w-1/3 h-48 bg-gray-200 p-4">Item</div>
+                <div class="w-1/3 h-48 bg-gray-200 p-4">
+                    <a href="#app" class="text-blue-500" @click.prevent="scrollTo('#app')">Go Back Up</a>
+                </div>
                 <div class="w-1/3 h-48 bg-gray-400 p-4">Item</div>
                 <div class="w-1/3 h-48 bg-gray-200 p-4">Item</div>
             </div>

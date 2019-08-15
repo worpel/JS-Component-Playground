@@ -6,4 +6,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 new Vue({
     el: '#app',
+
+    methods: {
+        scrollTo(selector) {
+            document.querySelector(selector).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    }
 });
