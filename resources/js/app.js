@@ -2,16 +2,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('scroll-link', require('./components/ScrollLink.vue').default);
 
 new Vue({
-    el: '#app',
-
-    methods: {
-        scrollTo(selector) {
-            document.querySelector(selector).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
+    el: '#app'
 });
