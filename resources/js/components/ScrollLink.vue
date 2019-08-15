@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import smoothscroll from 'smoothscroll-polyfill';
+
 export default {
     props: ['href'],
 
@@ -14,6 +16,12 @@ export default {
                 behavior: 'smooth'
             });
         }
+    },
+
+    // Adds support for older browsers
+    mounted() {
+        smoothscroll.polyfill();
+        console.log('test');
     }
 };
 </script>
